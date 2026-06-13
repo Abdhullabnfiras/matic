@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111111" />
+  <link rel="icon" type="image/png" href="matic-logo.png" />
+
+  <title>ماتيك — هندسة مستقبل الطباعة ثلاثية الأبعاد</title>
+  <meta name="description" content="ماتيك هي أول شركة عراقية تقوم بتصميم وتصنيع طابعات ثلاثية الأبعاد عالية الأداء — سريعة وموثوقة ومدعومة محلياً للجيل القادم من المبتكرين." />
+  <meta name="keywords" content="MATIC, 3D printing, Iraq, 3D printers, advanced manufacturing, additive manufacturing, Middle East technology, العراق, طباعة ثلاثية الأبعاد" />
+  <meta name="author" content="MATIC" />
+  <link rel="canonical" href="https://matic.iq/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ماتيك — هندسة مستقبل الطباعة ثلاثية الأبعاد" />
+  <meta property="og:description" content="الشركة العراقية الأولى التي تقوم بتصميم وتصنيع طابعات ثلاثية الأبعاد عالية الأداء للجيل القادم من المبتكرين." />
+  <meta property="og:locale" content="ar_IQ" />
+  <meta property="og:site_name" content="MATIC" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ماتيك — هندسة مستقبل الطباعة ثلاثية الأبعاد" />
+  <meta name="twitter:description" content="الشركة العراقية الأولى التي تقوم بتصميم وتصنيع طابعات ثلاثية الأبعاد عالية الأداء." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css?v=2.0" />
+
+  <!-- Set theme before paint to avoid flash -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("matic-theme");
+        var prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+        var theme = saved || (prefersLight ? "light" : "dark");
+        if (theme === "light") document.documentElement.setAttribute("data-theme", "light");
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MATIC",
+    "description": "The first Iraqi company designing and manufacturing high-performance 3D printers.",
+    "url": "https://matic.iq",
+    "foundingLocation": { "@type": "Country", "name": "Iraq" },
+    "slogan": "Engineering The Future Of 3D Printing"
+  }
+  </script>
+</head>
+<body>
+  <!-- Custom cursor -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <img src="matic-logo.png" alt="" class="preloader__mark" />
+      <div class="preloader__logo">MATIC</div>
+      <div class="preloader__bar"><span></span></div>
+      <div class="preloader__count">000</div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo" data-magnetic aria-label="MATIC home">
+        <img src="matic-logo.png" alt="MATIC logo" class="nav__logo-img" />
+        <span class="nav__logo-text">ماتيك</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#story">قصتنا</a>
+        <a href="#products">المنتجات</a>
+        <a href="#why">لماذا ماتيك</a>
+        <a href="#applications">التطبيقات</a>
+        <a href="#vision">رؤيتنا</a>
+        <a href="#gallery">معرض الصور</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light mode" data-magnetic>
+        <span class="theme-toggle__track">
+          <span class="theme-toggle__thumb">
+            <svg class="theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><g stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.6" y1="4.6" x2="6.7" y2="6.7"/><line x1="17.3" y1="17.3" x2="19.4" y2="19.4"/><line x1="4.6" y1="19.4" x2="6.7" y2="17.3"/><line x1="17.3" y1="6.7" x2="19.4" y2="4.6"/></g></svg>
+            <svg class="theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          </span>
+        </span>
+      </button>
+      <a href="index.html" class="lang-toggle btn btn--small" data-magnetic>English</a>
+      <a href="#contact" class="nav__cta btn btn--small" data-magnetic>اتصل بنا</a>
+      <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-menu__links">
+      <a href="#story">قصتنا</a>
+      <a href="#products">المنتجات</a>
+      <a href="#why">لماذا ماتيك</a>
+      <a href="#applications">التطبيقات</a>
+      <a href="#founder">المؤسس</a>
+      <a href="#vision">رؤيتنا</a>
+      <a href="#gallery">معرض الصور</a>
+      <a href="#contact">اتصل بنا</a>
+      <a href="index.html" style="color: var(--red); font-weight: 700;">English</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__glow hero__glow--1"></div>
+        <div class="hero__glow hero__glow--2"></div>
+        <svg class="hero__toolpath" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
+          <g class="hero__toolpath-rot">
+            <rect x="450" y="330" width="140" height="140" rx="24"/>
+            <rect x="410" y="290" width="220" height="220" rx="38"/>
+            <rect x="370" y="250" width="300" height="300" rx="52"/>
+            <rect x="330" y="210" width="380" height="380" rx="66"/>
+            <rect x="290" y="170" width="460" height="460" rx="80"/>
+            <rect x="250" y="130" width="540" height="540" rx="94"/>
+            <rect x="210" y="90"  width="620" height="620" rx="108"/>
+            <rect x="170" y="50"  width="700" height="700" rx="122"/>
+            <path class="hero__toolpath-infill" d="M470 360 H570 M470 380 H570 M470 400 H570 M470 420 H570 M470 440 H570"/>
+            <foreignObject x="450" y="330" width="140" height="140" class="hero__3d-cube-fo">
+              <div class="hero__3d-cube-fo-inner">
+                <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/cube-dynamic-premium.png" alt="3D Cube" class="hero__3d-cube" />
+              </div>
+            </foreignObject>
+          </g>
+        </svg>
+        <div class="hero__scan"></div>
+      </div>
+
+      <div class="hero__float hero__float--2" data-parallax="0.25" aria-hidden="true">
+        <div class="float-shape float-shape--ring"></div>
+      </div>
+      <div class="hero__float hero__float--3" data-parallax="0.4" aria-hidden="true">
+        <div class="float-shape float-shape--dot"></div>
+      </div>
+
+      <div class="hero__content container">
+        <div class="hero__badge reveal" data-reveal>
+          <span class="dot"></span> أول شركة عراقية للطابعات ثلاثية الأبعاد
+        </div>
+        <h1 class="hero__title">
+          <span class="line"><span class="word" data-split>هندسة</span></span>
+          <span class="line"><span class="word" data-split>مستقبل</span> <span class="word" data-split>الطباعة</span></span>
+          <span class="line accent"><span class="word" data-split>ثلاثية</span> <span class="word" data-split>الأبعاد</span></span>
+        </h1>
+        <p class="hero__sub reveal" data-reveal data-delay="0.6">
+          الشركة العراقية الأولى التي تقوم بتصميم وتصنيع طابعات ثلاثية الأبعاد عالية الأداء للجيل القادم من المبتكرين.
+        </p>
+        <div class="hero__cta reveal" data-reveal data-delay="0.8">
+          <a href="#products" class="btn btn--primary" data-magnetic>
+            <span>استكشف المنتجات</span>
+          </a>
+          <a href="#contact" class="btn btn--ghost" data-magnetic>
+            <span>اتصل بنا</span>
+          </a>
+        </div>
+
+        <div class="hero__stats reveal" data-reveal data-delay="1">
+          <div class="hero__stat">
+            <strong>500<small>مم/ث</small></strong>
+            <span>أقصى سرعة</span>
+          </div>
+          <div class="hero__stat">
+            <strong>±0.05<small>مم</small></strong>
+            <span>الدقة</span>
+          </div>
+          <div class="hero__stat">
+            <strong>100<small>%</small></strong>
+            <span>دعم محلي بالكامل</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3D printer showcase -->
+      <div class="hero__printer" data-parallax="0.08" aria-hidden="true">
+        <div class="hero__printer-glow"></div>
+        <img src="3.png" alt="MATIC 3D printer" class="hero__printer-img" />
+        <div class="hero__printer-tag glass">
+          <span class="dot"></span> ماتيك كور · نشط
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span>اسحب لأسفل</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>ابتكار</span><span class="sep">✦</span>
+        <span>دقة</span><span class="sep">✦</span>
+        <span>بساطة</span><span class="sep">✦</span>
+        <span>تميز هندسي</span><span class="sep">✦</span>
+        <span>تصنيع ع عراق عراقي</span><span class="sep">✦</span>
+        <span>تكنولوجيا المستقبل</span><span class="sep">✦</span>
+        <span>ابتكار</span><span class="sep">✦</span>
+        <span>دقة</span><span class="sep">✦</span>
+        <span>بساطة</span><span class="sep">✦</span>
+        <span>تميز هندسي</span><span class="sep">✦</span>
+        <span>تصنيع عراقي</span><span class="sep">✦</span>
+        <span>تكنولوجيا المستقبل</span><span class="sep">✦</span>
+      </div>
+    </div>
+
+    <!-- ============ STORY ============ -->
+    <section class="story section" id="story">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow" data-reveal>01 — قصتنا</span>
+          <h2 class="section__title" data-split-lines>
+            لسنا مجرد شركة طابعات ثلاثية أبعاد. بل بداية التصنيع المتقدم في العراق.
+          </h2>
+        </div>
+
+        <div class="story__grid">
+          <article class="story__card glass" data-reveal>
+            <span class="story__num">لماذا نحن هنا</span>
+            <h3>لماذا تأسست ماتيك</h3>
+            <p>رأينا جيلاً من المهندسين والمصممين والمبتكرين يعيقهم توفر الأدوات لا القدرة. تأسست ماتيك لتضع التصنيع الرقمي العالمي في أيدي العراقيين مباشرة.</p>
+          </article>
+          <article class="story__card glass" data-reveal data-delay="0.1">
+            <span class="story__num">الرؤية</span>
+            <h3>رؤية التصنيع</h3>
+            <p>نقوم بتصميم وتصنيع طابعات ثلاثية أبعاد سريعة وموثوقة وسهلة الاستخدام — بهندسة محلية، ودعم محلي، ومصممة وفقاً لأعلى معايير الجودة العالمية.</p>
+          </article>
+          <article class="story__card glass" data-reveal data-delay="0.2">
+            <span class="story__num">المستقبل</span>
+            <h3>مستقبل الابتكار المحلي</h3>
+            <p>كل طابعة نقوم بتسليمها هي ورشة عمل، وفصل دراسي، ومصنع في آن واحد. نحن نصنع الأدوات التي تمكن العراق من بناء النماذج والإنتاج والابتكار بلا حدود.</p>
+          </article>
+          <article class="story__card glass" data-reveal data-delay="0.3">
+            <span class="story__num">الأثر</span>
+            <h3>الأثر على النظام التكنولوجي</h3>
+            <p>من الجامعات إلى الشركات الناشئة والمصانع القائمة، تزرع ماتيك بيئة تصنيع تتحول فيها الأفكار إلى مجسمات ملموسة — لتسريع قدرة بلد كامل على البناء.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCTS ============ -->
+    <section class="products section" id="products">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow" data-reveal>02 — المنتجات</span>
+          <h2 class="section__title" data-split-lines>آلات مصممة للأداء العالي.</h2>
+        </div>
+
+        <div class="products__grid">
+          <article class="product-card glass tilt" data-reveal>
+            <div class="product-card__glow"></div>
+            <div class="product-card__visual">
+              <img src="3.png" alt="MATIC Core 3D printer" loading="lazy" />
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__tag">الرائدة</span>
+              <h3>ماتيك كور (Core)</h3>
+              <p>منصة CoreXY عالية السرعة للمحترفين الذين يرفضون الانتظار.</p>
+              <ul class="product-card__specs">
+                <li><span>السرعة</span><b>٥٠٠ مم/ث</b></li>
+                <li><span>حجم البناء</span><b>٢٥٦³ مم</b></li>
+                <li><span>الدقة</span><b>±٠.٠٥ مم</b></li>
+                <li><span>الفوهة</span><b>٣٠٠ °م</b></li>
+              </ul>
+              <a href="#contact" class="product-card__link" data-magnetic>تهيئة وتخصيص ←</a>
+            </div>
+          </article>
+
+          <article class="product-card glass tilt" data-reveal data-delay="0.1">
+            <div class="product-card__glow"></div>
+            <div class="product-card__visual">
+              <img src="4.png" alt="MATIC Pro 3D printer" loading="lazy" />
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__tag">الصناعية</span>
+              <h3>ماتيك برو (Pro)</h3>
+              <p>طابعة ذات حجم بناء كبير مصممة للإنتاج والتشغيل المستمر.</p>
+              <ul class="product-card__specs">
+                <li><span>السرعة</span><b>٤٥٠ مم/ث</b></li>
+                <li><span>حجم البناء</span><b>٣٥٠³ مم</b></li>
+                <li><span>الدقة</span><b>±٠.٠٣ مم</b></li>
+                <li><span>الفوهة</span><b>٣٥٠ °م</b></li>
+              </ul>
+              <a href="#contact" class="product-card__link" data-magnetic>تهيئة وتخصيص ←</a>
+            </div>
+          </article>
+
+          <article class="product-card glass tilt" data-reveal data-delay="0.2">
+            <div class="product-card__glow"></div>
+            <div class="product-card__visual">
+              <img src="2.png" alt="MATIC Edu 3D printer printing in detail" loading="lazy" />
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__tag">التعليمية</span>
+              <h3>ماتيك إيدو (Edu)</h3>
+              <p>بساطة التوصيل والطباعة للفصول الدراسية والمختبرات والمبتدئين.</p>
+              <ul class="product-card__specs">
+                <li><span>السرعة</span><b>٣٠٠ مم/ث</b></li>
+                <li><span>حجم البناء</span><b>٢٢٠³ مم</b></li>
+                <li><span>الدقة</span><b>±٠.١ مم</b></li>
+                <li><span>الفوهة</span><b>٢٦٠ °م</b></li>
+              </ul>
+              <a href="#contact" class="product-card__link" data-magnetic>تهيئة وتخصيص ←</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Comparison -->
+        <div class="compare glass" data-reveal>
+          <h3 class="compare__title">قارن بين الطابعات</h3>
+          <div class="compare__scroll">
+            <table class="compare__table">
+              <thead>
+                <tr>
+                  <th>المواصفات</th>
+                  <th>كور (Core)</th>
+                  <th>برو (Pro)</th>
+                  <th>إيدو (Edu)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>السرعة القصوى</td><td>٥٠٠ مم/ث</td><td>٤٥٠ مم/ث</td><td>٣٠٠ مم/ث</td></tr>
+                <tr><td>حجم البناء</td><td>٢٥٦³ مم</td><td>٣٥٠³ مم</td><td>٢٢٠³ مم</td></tr>
+                <tr><td>دقة تحديد الموقع</td><td>±٠.٠٥ مم</td><td>±٠.٠٣ مم</td><td>±٠.١ مم</td></tr>
+                <tr><td>أقصى درجة حرارة للفوهة</td><td>٣٠٠ °م</td><td>٣٥٠ °م</td><td>٢٦٠ °م</td></tr>
+                <tr><td>تسوية السرير تلقائياً</td><td>✓</td><td>✓</td><td>✓</td></tr>
+                <tr><td>غرفة مغلقة بالكامل</td><td>✓</td><td>✓</td><td>—</td></tr>
+                <tr><td>الدعم الفني المحلي</td><td>✓</td><td>✓</td><td>✓</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY MATIC ============ -->
+    <section class="why section" id="why">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow" data-reveal>03 — لماذا ماتيك</span>
+          <h2 class="section__title" data-split-lines>صُنعت بشكل مختلف. صُنعت هنا.</h2>
+        </div>
+
+        <div class="why__grid">
+          <article class="feature glass" data-reveal>
+            <div class="feature__icon">
+              <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/flash-dynamic-premium.png" alt="Speed" class="feature__3d-icon" />
+            </div>
+            <h3>سرعة فائقة</h3>
+            <p>سرعات طباعة رائدة في فئتها دون المساومة على جودة الأسطح الخارجية.</p>
+          </article>
+          <article class="feature glass" data-reveal data-delay="0.05">
+            <div class="feature__icon">
+              <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/thumb-up-dynamic-premium.png" alt="Easy" class="feature__3d-icon" />
+            </div>
+            <h3>سهولة الاستخدام</h3>
+            <p>إعداد موجه، برمجيات بديهية، وملفات تعريف جاهزة للطباعة فور إخراجها من الصندوق.</p>
+          </article>
+          <article class="feature glass" data-reveal data-delay="0.1">
+            <div class="feature__icon">
+              <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/target-dynamic-premium.png" alt="Precision" class="feature__3d-icon" />
+            </div>
+            <h3>هندسة دقيقة</h3>
+            <p>هياكل صلبة وحركة معايرة لدقة متكررة على مستوى الميكرون.</p>
+          </article>
+          <article class="feature glass" data-reveal data-delay="0.15">
+            <div class="feature__icon">
+              <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/chat-bubble-dynamic-premium.png" alt="Support" class="feature__3d-icon" />
+            </div>
+            <h3>دعم فني محلي</h3>
+            <p>مهندسون عراقيون، قطع غيار متوفرة، وخدمة صيانة محلية فورية — لا انتظار للاستيراد.</p>
+          </article>
+          <article class="feature glass" data-reveal data-delay="0.2">
+            <div class="feature__icon">
+              <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/lock-dynamic-premium.png" alt="Hardware" class="feature__3d-icon" />
+            </div>
+            <h3>عتاد موثوق</h3>
+            <p>مكونات صناعية عالية الجودة مصممة لآلاف الساعات من العمل المتواصل.</p>
+          </article>
+          <article class="feature glass" data-reveal data-delay="0.25">
+            <div class="feature__icon">
+              <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/rocket-dynamic-premium.png" alt="Future" class="feature__3d-icon" />
+            </div>
+            <h3>جاهزة للمستقبل</h3>
+            <p>منصات معيارية قابلة للتطوير والترقية تتماشى وتتطور مع طموحاتك.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ APPLICATIONS ============ -->
+    <section class="apps section" id="applications">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow" data-reveal>04 — مجالات التطبيق</span>
+          <h2 class="section__title" data-split-lines>منصة واحدة. لكل قطاع وصناعة.</h2>
+        </div>
+
+        <div class="apps__layout">
+          <div class="apps__list">
+            <button class="apps__item is-active" data-app="0">
+              <span class="apps__index">٠١</span>
+              <span class="apps__name">الهندسة المعمارية</span>
+            </button>
+            <button class="apps__item" data-app="1">
+              <span class="apps__index">٠٢</span>
+              <span class="apps__name">الهندسة والابتكار</span>
+            </button>
+            <button class="apps__item" data-app="2">
+              <span class="apps__index">٠٣</span>
+              <span class="apps__name">التعليم والأكاديميا</span>
+            </button>
+            <button class="apps__item" data-app="3">
+              <span class="apps__index">٠٤</span>
+              <span class="apps__name">التصنيع والإنتاج</span>
+            </button>
+            <button class="apps__item" data-app="4">
+              <span class="apps__index">٠٥</span>
+              <span class="apps__name">الرعاية الصحية</span>
+            </button>
+            <button class="apps__item" data-app="5">
+              <span class="apps__index">٠٦</span>
+              <span class="apps__name">تصميم المنتجات</span>
+            </button>
+          </div>
+
+          <div class="apps__stage glass">
+            <div class="apps__panel is-active" data-panel="0">
+              <div class="apps__visual" data-app-art="0">
+                <div class="apps__3d-wrap">
+                  <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/cube-dynamic-premium.png" alt="Architecture 3D Icon" class="apps__3d-icon" />
+                </div>
+              </div>
+              <h3>الهندسة المعمارية</h3>
+              <p>حوّل الأفكار إلى مجسمات ملموسة في ساعات معدودة. اعرض المباني والمخططات والتضاريس بتفاصيل لا يمكن لأي مجسم ورقي منافستها.</p>
+            </div>
+            <div class="apps__panel" data-panel="1">
+              <div class="apps__visual" data-app-art="1">
+                <div class="apps__3d-wrap">
+                  <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/tool-dynamic-premium.png" alt="Engineering 3D Icon" class="apps__3d-icon" />
+                </div>
+              </div>
+              <h3>الهندسة والابتكار</h3>
+              <p>اختبر النماذج الأولية الوظيفية في غضون ليلة واحدة. افحص الملاءمة والشكل والأداء قبل الانتقال للإنتاج المكلف.</p>
+            </div>
+            <div class="apps__panel" data-panel="2">
+              <div class="apps__visual" data-app-art="2">
+                <div class="apps__3d-wrap">
+                  <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/notebook-dynamic-premium.png" alt="Education 3D Icon" class="apps__3d-icon" />
+                </div>
+              </div>
+              <h3>التعليم والأكاديميا</h3>
+              <p>امنح الطلاب جسراً عملياً يربط بين التصميم الرقمي والعالم المادي — واكسبهم المهارات التي يتطلبها المستقبل.</p>
+            </div>
+            <div class="apps__panel" data-panel="3">
+              <div class="apps__visual" data-app-art="3">
+                <div class="apps__3d-wrap">
+                  <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/gift-dynamic-premium.png" alt="Manufacturing 3D Icon" class="apps__3d-icon" />
+                </div>
+              </div>
+              <h3>التصنيع والإنتاج</h3>
+              <p>أنتج القوالب والمثبتات وقطع الغيار النهائية عند الطلب. قلل أوقات الانتظار وحافظ على استمرارية خطوط الإنتاج.</p>
+            </div>
+            <div class="apps__panel" data-panel="4">
+              <div class="apps__visual" data-app-art="4">
+                <div class="apps__3d-wrap">
+                  <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/heart-dynamic-premium.png" alt="Healthcare 3D Icon" class="apps__3d-icon" />
+                </div>
+              </div>
+              <h3>الرعاية الصحية</h3>
+              <p>مجسمات تشريحية مخصصة، أدلة جراحية، وأجهزة مساعدة — مصنعة بدقة وعن قرب محلياً وبجودة فائقة.</p>
+            </div>
+            <div class="apps__panel" data-panel="5">
+              <div class="apps__visual" data-app-art="5">
+                <div class="apps__3d-wrap">
+                  <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/bulb-dynamic-premium.png" alt="Product Design 3D Icon" class="apps__3d-icon" />
+                </div>
+              </div>
+              <h3>تصميم المنتجات</h3>
+              <p>انتقل من مسودة التصميم الرقمي إلى نموذج ملموس في فترة ما بعد الظهر، وقم بالتعديل والتطوير بكل ثقة.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOUNDER ============ -->
+    <section class="founder section" id="founder">
+      <div class="founder__bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="founder__grid">
+          <div class="founder__portrait" data-reveal>
+            <span class="founder__ring" aria-hidden="true"></span>
+            <div class="founder__photo">
+              <div class="founder__photo-glow"></div>
+              <img src="founder.png" alt="Bashar Al Noorachi, Founder & CEO of MATIC" loading="lazy" />
+            </div>
+            <div class="founder__badge glass">
+              <span class="founder__badge-dot"></span>
+              <div>
+                <strong>بشار النورجي</strong>
+                <span>المؤسس والمدير التنفيذي · ماتيك</span>
+              </div>
+            </div>
+          </div>
+          <div class="founder__content">
+            <span class="eyebrow" data-reveal>05 — المؤسس</span>
+            <blockquote class="founder__quote" data-split-lines>
+              "نؤمن بأن العراق قادر على بناء تكنولوجيا بمستويات عالمية. وماتيك هي خطوتنا الأولى نحو هذا المستقبل."
+            </blockquote>
+            <div class="founder__sign" data-reveal>
+              <strong>بشار النورجي</strong>
+              <span>المؤسس والمدير التنفيذي، ماتيك</span>
+            </div>
+            <div class="founder__cols">
+              <div data-reveal>
+                <h4>قصة المؤسس</h4>
+                <p>مهندس رفض القبول بفكرة أن التصنيع المتقدم ينتمي لأماكن أخرى فقط — وقرر أن يبنيه في وطنه العراق.</p>
+              </div>
+              <div data-reveal data-delay="0.1">
+                <h4>الرؤية</h4>
+                <p>عراق يعتمد على نفسه، حيث يمكن تصميم أي فكرة وبناء نموذجها الأولي وإنتاجها دون الحاجة لعبور الحدود.</p>
+              </div>
+              <div data-reveal data-delay="0.15">
+                <h4>المهمة</h4>
+                <p>تقديم طابعات ثلاثية الأبعاد سريعة وموثوقة ومصممة بجمالية عالية، مدعومة بدعم محلي لا يضاهى.</p>
+              </div>
+              <div data-reveal data-delay="0.2">
+                <h4>فلسفة القيادة</h4>
+                <p>البناء بدقة، القيادة بتواضع، وقياس النجاح من خلال تمكين المبتكرين والمبدعين من حولنا.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VISION / TIMELINE ============ -->
+    <section class="vision section" id="vision">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow" data-reveal>06 — رؤية التصنيع</span>
+          <h2 class="section__title" data-split-lines>خارطة الطريق لنهضة تصنيع عراقية.</h2>
+        </div>
+
+        <div class="vision__stats">
+          <div class="stat" data-reveal>
+            <span class="stat__num" data-count="500">0</span><span class="stat__suffix">مم/ث</span>
+            <span class="stat__label">أقصى سرعة طباعة</span>
+          </div>
+          <div class="stat" data-reveal data-delay="0.1">
+            <span class="stat__num" data-count="50">0</span><span class="stat__suffix">ميكرون</span>
+            <span class="stat__label">دقة الطبقات</span>
+          </div>
+          <div class="stat" data-reveal data-delay="0.2">
+            <span class="stat__num" data-count="100">0</span><span class="stat__suffix">%</span>
+            <span class="stat__label">دعم محلي بالكامل</span>
+          </div>
+          <div class="stat" data-reveal data-delay="0.3">
+            <span class="stat__num" data-count="24">0</span><span class="stat__suffix">/7</span>
+            <span class="stat__label">جاهزة للإنتاج</span>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline__line"><span class="timeline__progress"></span></div>
+          <div class="timeline__item" data-reveal>
+            <span class="timeline__year">2024</span>
+            <h3>الشرارة الأولى</h3>
+            <p>تأسست ماتيك بقناعة واحدة: العراق قادر على الصنع، لا الشراء فقط.</p>
+          </div>
+          <div class="timeline__item" data-reveal data-delay="0.1">
+            <span class="timeline__year">2025</span>
+            <h3>الماكينات الأولى</h3>
+            <p>خروج أولى طابعاتنا عالية الأداء من خط الإنتاج إلى أيدي المبتكرين الأوائل.</p>
+          </div>
+          <div class="timeline__item" data-reveal data-delay="0.2">
+            <span class="timeline__year">2026</span>
+            <h3>التوسع والنمو</h3>
+            <p>تعميق الإنتاج المحلي، توسيع مجموعة المنتجات، وتشكيل شبكة دعم على مستوى البلاد.</p>
+          </div>
+          <div class="timeline__item" data-reveal data-delay="0.3">
+            <span class="timeline__year">المستقبل وما بعده</span>
+            <h3>صناعة جديدة</h3>
+            <p>ترسيخ ماتيك لنظام بيئي مزدهر للتصنيع المتقدم في العراق والشرق الأوسط.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="gallery section" id="gallery">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow" data-reveal>07 — معرض الصور</span>
+          <h2 class="section__title" data-split-lines>طُبعت في العراق.</h2>
+        </div>
+        <div class="gallery__grid" id="galleryGrid">
+          <!-- populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="testi section" id="testimonials">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow" data-reveal>08 — آراء العملاء</span>
+          <h2 class="section__title" data-split-lines>موضع ثقة الأشخاص الذين يبنون الغد.</h2>
+        </div>
+        <div class="testi__grid">
+          <figure class="testi__card glass" data-reveal>
+            <blockquote>"لقد قللنا وقت بناء النماذج بنسبة 70%. طابعة كور ببساطة لا تتوقف، والدعم الفني على بعد مكالمة هاتفية."</blockquote>
+            <figcaption><strong>ليلى هـ.</strong><span>مهندسة ميكانيك، بغداد</span></figcaption>
+          </figure>
+          <figure class="testi__card glass" data-reveal data-delay="0.1">
+            <blockquote>"أخيراً طابعة مع خدمة صيانة محليّة. مختبرنا يقوم بتشغيل ثلاث آلات ماتيك يومياً."</blockquote>
+            <figcaption><strong>د. عمر أ.</strong><span>مدير مختبر جامعي، البصرة</span></figcaption>
+          </figure>
+          <figure class="testi__card glass" data-reveal data-delay="0.2">
+            <blockquote>"الجودة تضاهي وتنافس أي منتج مستورد — بسعر ومستوى دعم لا يمثله أي شيء آخر هنا."</blockquote>
+            <figcaption><strong>سارة ك.</strong><span>استوديو تصميم منتجات، أربيل</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="contact__grid">
+          <div class="contact__intro">
+            <span class="eyebrow" data-reveal>09 — اتصل بنا</span>
+            <h2 class="section__title" data-split-lines>لنبنِ المستقبل معاً.</h2>
+            <p class="contact__lead" data-reveal>تحدث مع فريقنا حول الماكينات، البرامج التعليمية أو الشراكات. نقوم بالرد خلال يوم عمل واحد.</p>
+
+            <div class="contact__info">
+              <a href="mailto:hello@matic.iq" class="contact__chip glass" data-magnetic>
+                <span>البريد الإلكتروني</span><strong>hello@matic.iq</strong>
+              </a>
+              <a href="tel:+9640000000000" class="contact__chip glass" data-magnetic>
+                <span>الهاتف</span><strong>+964 000 000 0000</strong>
+              </a>
+              <div class="contact__chip glass">
+                <span>المقر الرئيسي</span><strong>بغداد، العراق</strong>
+              </div>
+            </div>
+
+            <div class="contact__map glass" aria-label="Map area">
+              <div class="contact__map-grid"></div>
+              <span class="contact__map-pin"></span>
+              <span class="contact__map-label">بغداد · العراق</span>
+            </div>
+
+            <div class="contact__social">
+              <a href="https://www.instagram.com/matic.iq/" target="_blank" rel="noopener noreferrer" data-magnetic aria-label="Instagram">IG</a>
+              <a href="https://www.facebook.com/profile.php?id=61578563612533&rdid=oIz0VlsvCKReDyAR&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AtW3nZHas%2F%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio#" target="_blank" rel="noopener noreferrer" data-magnetic aria-label="Facebook">FB</a>
+              <a href="#" data-magnetic aria-label="LinkedIn">IN</a>
+              <a href="#" data-magnetic aria-label="X">X</a>
+            </div>
+          </div>
+
+          <form class="contact__form glass" id="contactForm" novalidate>
+            <div class="field">
+              <input type="text" id="name" name="name" required placeholder=" " />
+              <label for="name">الاسم الكامل</label>
+            </div>
+            <div class="field">
+              <input type="email" id="email" name="email" required placeholder=" " />
+              <label for="email">البريد الإلكتروني</label>
+            </div>
+            <div class="field">
+              <input type="text" id="company" name="company" placeholder=" " />
+              <label for="company">الشركة / المؤسسة</label>
+            </div>
+            <div class="field">
+              <select id="interest" name="interest">
+                <option value="core">ماتيك كور (Core)</option>
+                <option value="pro">ماتيك برو (Pro)</option>
+                <option value="edu">ماتيك إيدو (Edu)</option>
+                <option value="partnership">شراكة</option>
+                <option value="other">أخرى</option>
+              </select>
+              <label for="interest" class="field__static">مهتم بـ</label>
+            </div>
+            <div class="field">
+              <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+              <label for="message">الرسالة</label>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full" data-magnetic>
+              <span>إرسال الرسالة</span>
+            </button>
+            <p class="contact__note" id="formNote" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <a href="#hero" class="footer__logo">ماتيك</a>
+        <p class="footer__tag">هندسة مستقبل الطباعة ثلاثية الأبعاد — من العراق، إلى العالم.</p>
+      </div>
+      <div class="footer__grid">
+        <div>
+          <h5>المنتجات</h5>
+          <a href="#products">ماتيك كور</a>
+          <a href="#products">ماتيك برو</a>
+          <a href="#products">ماتيك إيدو</a>
+        </div>
+        <div>
+          <h5>الشركة</h5>
+          <a href="#story">قصتنا</a>
+          <a href="#founder">المؤسس</a>
+          <a href="#vision">رؤيتنا</a>
+        </div>
+        <div>
+          <h5>استكشف</h5>
+          <a href="#applications">مجالات التطبيق</a>
+          <a href="#gallery">معرض الصور</a>
+          <a href="#testimonials">آراء العملاء</a>
+        </div>
+        <div>
+          <h5>اتصل بنا</h5>
+          <a href="#contact">اتصل بنا</a>
+          <a href="mailto:hello@matic.iq">hello@matic.iq</a>
+          <a href="#">الوظائف</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="year"></span> ماتيك. جميع الحقوق محفوظة.</span>
+        <span>صُمم وصُنع في العراق 🇮🇶</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

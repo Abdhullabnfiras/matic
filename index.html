@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111111" />
+  <link rel="icon" type="image/png" href="matic-logo.png" />
+
+  <title>MATIC — Engineering The Future Of 3D Printing</title>
+  <meta name="description" content="MATIC is the first Iraqi company designing and manufacturing high-performance 3D printers — fast, reliable, and locally supported for the next generation of innovators." />
+  <meta name="keywords" content="MATIC, 3D printing, Iraq, 3D printers, advanced manufacturing, additive manufacturing, Middle East technology" />
+  <meta name="author" content="MATIC" />
+  <link rel="canonical" href="https://matic.iq/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="MATIC — Engineering The Future Of 3D Printing" />
+  <meta property="og:description" content="The first Iraqi company building high-performance 3D printers for the next generation of innovators." />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="MATIC" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MATIC — Engineering The Future Of 3D Printing" />
+  <meta name="twitter:description" content="The first Iraqi company building high-performance 3D printers." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css?v=2.0" />
+
+  <!-- Set theme before paint to avoid flash -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("matic-theme");
+        var prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+        var theme = saved || (prefersLight ? "light" : "dark");
+        if (theme === "light") document.documentElement.setAttribute("data-theme", "light");
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MATIC",
+    "description": "The first Iraqi company designing and manufacturing high-performance 3D printers.",
+    "url": "https://matic.iq",
+    "foundingLocation": { "@type": "Country", "name": "Iraq" },
+    "slogan": "Engineering The Future Of 3D Printing"
+  }
+  </script>
+</head>
+<body>
+  <!-- Custom cursor -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <img src="matic-logo.png" alt="" class="preloader__mark" />
+      <div class="preloader__logo">MATIC</div>
+      <div class="preloader__bar"><span></span></div>
+      <div class="preloader__count">000</div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo" data-magnetic aria-label="MATIC home">
+        <img src="matic-logo.png" alt="MATIC logo" class="nav__logo-img" />
+        <span class="nav__logo-text">MATIC</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#story">Story</a>
+        <a href="#products">Products</a>
+        <a href="#why">Why MATIC</a>
+        <a href="#applications">Applications</a>
+        <a href="#vision">Vision</a>
+        <a href="#gallery">Gallery</a>
+           <button class="theme-toggle" id="themeToggle" aria-label="Toggle light mode" data-magnetic>
+        <span class="theme-toggle__track">
+          <span class="theme-toggle__thumb">
+            <svg class="theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><g stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.6" y1="4.6" x2="6.7" y2="6.7"/><line x1="17.3" y1="17.3" x2="19.4" y2="19.4"/><line x1="4.6" y1="19.4" x2="6.7" y2="17.3"/><line x1="17.3" y1="6.7" x2="19.4" y2="4.6"/></g></svg>
+            <svg class="theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          </span>
+        </span>
+      </button>
+      <a href="index-ar.html" class="lang-toggle btn btn--small" data-magnetic>العربية</a>
+      <a href="#contact" class="nav__cta btn btn--small" data-magnetic>Contact</a>
+      <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+ 
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-menu__links">
+      <a href="#story">Story</a>
+      <a href="#products">Products</a>
+      <a href="#why">Why MATIC</a>
+      <a href="#applications">Applications</a>
+      <a href="#founder">Founder</a>
+      <a href="#vision">Vision</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+      <a href="index-ar.html" style="color: var(--red); font-weight: 700;">العربية</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__glow hero__glow--1"></div>
+        <div class="hero__glow hero__glow--2"></div>
+        <svg class="hero__toolpath" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
+          <g class="hero__toolpath-rot">
+            <rect x="450" y="330" width="140" height="140" rx="24"/>
+            <rect x="410" y="290" width="220" height="220" rx="38"/>
+            <rect x="370" y="250" width="300" height="300" rx="52"/>
+            <rect x="330" y="210" width="380" height="380" rx="66"/>
+            <rect x="290" y="170" width="460" height="460" rx="80"/>
+            <rect x="250" y="130" width="540" height="540" rx="94"/>
+            <rect x="210" y="90"  width="620" height="620" rx="108"/>
+            <rect x="170" y="50"  width="700" height="700" rx="122"/>
+            <path class="hero__toolpath-infill" d="M470 360 H570 M470 380 H570 M470 400 H570 M470 420 H570 M470 440 H570"/>
+            <foreignObject x="450" y="330" width="140" height="140" class="hero__3d-cube-fo">
+              <div class="hero__3d-cube-fo-inner">
+                <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/cube-dynamic-premium.png" alt="3D Cube" class="hero__3d-cube" />
+              </div>
+            </foreignObject>
+          </g>
+        </svg>
+        <div class="hero__scan"></div>
+      </div>
+      <div class="hero__float hero__float--2" data-parallax="0.25" aria-hidden="true">
+        <div class="float-shape float-shape--ring"></div>
+      </div>
+      <div class="hero__float hero__float--3" data-parallax="0.4" aria-hidden="true">
+        <div class="float-shape float-shape--dot"></div>
+      </div>
+
+      <div class="hero__content container">
+        <div class="hero__badge reveal" data-reveal>
+          <span class="dot"></span> First Iraqi 3D Printing Company
+        </div>
+        <h1 class="hero__title">
+          <span class="line"><span class="word" data-split>Engineering</span></span>
+          <span class="line"><span class="word" data-split>The</span> <span class="word" data-split>Future</span> <span class="word" data-split>Of</span></span>
+          <span class="line accent"><span class="word" data-split>3D</span> <span class="word" data-split>Printing</span></span>
+        </h1>
+        <p class="hero__sub reveal" data-reveal data-delay="0.6">
+          The first Iraqi company building high-performance 3D printers for the
+          next generation of innovators.
+        </p>
+        <div class="hero__cta reveal" data-reveal data-delay="0.8">
+          <a href="#products" class="btn btn--primary" data-magnetic>
+            <span>Explore Products</span>
+          </a>
+          <a href="#contact" class="btn btn--ghost" data-magnetic>
+            <span>Contact Us</span>
+          </a>
+        </div>
+
+        <div class="hero__stats reveal" data-reveal data-delay="1">
+          <div class="hero__stat">
+            <strong>500<small>mm/s</small></strong>
+            <span>Peak speed</span>
+          </div>
+          <div class="hero__stat">
+            <strong>±0.05<small>mm</small></strong>
+            <span>Accuracy</span>
+          </div>
+          <div class="hero__stat">
+            <strong>100<small>%</small></strong>
+            <span>Locally supported</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3D printer showcase -->
+      <div class="hero__printer" data-parallax="0.08" aria-hidden="true">
+        <div class="hero__printer-glow"></div>
+        <img src="3.png" alt="MATIC 3D printer" class="hero__printer-img" />
+        <div class="hero__printer-tag glass">
+          <span class="dot"></span> MATIC Core · Live
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Innovation</span><span class="sep">✦</span>
+        <span>Precision</span><span class="sep">✦</span>
+        <span>Simplicity</span><span class="sep">✦</span>
+        <span>Engineering Excellence</span><span class="sep">✦</span>
+        <span>Iraqi Manufacturing</span><span class="sep">✦</span>
+        <span>Future Technology</span><span class="sep">✦</span>
+        <span>Innovation</span><span class="sep">✦</span>
+        <span>Precision</span><span class="sep">✦</span>
+        <span>Simplicity</span><span class="sep">✦</span>
+        <span>Engineering Excellence</span><span class="sep">✦</span>
+        <span>Iraqi Manufacturing</span><span class="sep">✦</span>
+        <span>Future Technology</span><span class="sep">✦</span>
+      </div>
+    </div>
+
+    <!-- ============ STORY ============ -->
+    <section class="story section" id="story">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow" data-reveal>01 — Our Story</span>
+          <h2 class="section__title" data-split-lines>
+            Not just a 3D printer company. The beginning of advanced manufacturing in Iraq.
+          </h2>
+        </div>
+
+        <div class="story__grid">
+          <article class="story__card glass" data-reveal>
+            <span class="story__num">Why we exist</span>
+            <h3>Why MATIC Was Founded</h3>
+            <p>We saw a generation of engineers, designers and creators held back by
+            access — not ability. MATIC was founded to put world-class digital
+            manufacturing directly into Iraqi hands.</p>
+          </article>
+          <article class="story__card glass" data-reveal data-delay="0.1">
+            <span class="story__num">The vision</span>
+            <h3>The Manufacturing Vision</h3>
+            <p>We design and manufacture fast, reliable, easy-to-use 3D printers —
+            engineered locally, supported locally, and built to a global standard
+            of quality.</p>
+          </article>
+          <article class="story__card glass" data-reveal data-delay="0.2">
+            <span class="story__num">The future</span>
+            <h3>The Future Of Local Innovation</h3>
+            <p>Every printer we ship is a workshop, a classroom and a factory in one.
+            We're building the tools that let Iraq prototype, produce and create
+            without limits.</p>
+          </article>
+          <article class="story__card glass" data-reveal data-delay="0.3">
+            <span class="story__num">The impact</span>
+            <h3>Impact On Iraq's Technology Ecosystem</h3>
+            <p>From universities to startups to established factories, MATIC seeds an
+            ecosystem where ideas become objects — accelerating an entire nation's
+            capacity to build.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCTS ============ -->
+    <section class="products section" id="products">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow" data-reveal>02 — Products</span>
+          <h2 class="section__title" data-split-lines>Machines engineered to perform.</h2>
+        </div>
+
+        <div class="products__grid">
+          <article class="product-card glass tilt" data-reveal>
+            <div class="product-card__glow"></div>
+            <div class="product-card__visual">
+              <img src="3.png" alt="MATIC Core 3D printer" loading="lazy" />
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__tag">Flagship</span>
+              <h3>MATIC Core</h3>
+              <p>High-speed CoreXY platform for professionals who refuse to wait.</p>
+              <ul class="product-card__specs">
+                <li><span>Speed</span><b>500 mm/s</b></li>
+                <li><span>Build Volume</span><b>256³ mm</b></li>
+                <li><span>Accuracy</span><b>±0.05 mm</b></li>
+                <li><span>Nozzle</span><b>300 °C</b></li>
+              </ul>
+              <a href="#contact" class="product-card__link" data-magnetic>Configure →</a>
+            </div>
+          </article>
+
+          <article class="product-card glass tilt" data-reveal data-delay="0.1">
+            <div class="product-card__glow"></div>
+            <div class="product-card__visual">
+              <img src="4.png" alt="MATIC Pro 3D printer" loading="lazy" />
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__tag">Industrial</span>
+              <h3>MATIC Pro</h3>
+              <p>A large-format workhorse engineered for continuous production runs.</p>
+              <ul class="product-card__specs">
+                <li><span>Speed</span><b>450 mm/s</b></li>
+                <li><span>Build Volume</span><b>350³ mm</b></li>
+                <li><span>Accuracy</span><b>±0.03 mm</b></li>
+                <li><span>Nozzle</span><b>350 °C</b></li>
+              </ul>
+              <a href="#contact" class="product-card__link" data-magnetic>Configure →</a>
+            </div>
+          </article>
+
+          <article class="product-card glass tilt" data-reveal data-delay="0.2">
+            <div class="product-card__glow"></div>
+            <div class="product-card__visual">
+              <img src="2.png" alt="MATIC Edu 3D printer printing in detail" loading="lazy" />
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__tag">Education</span>
+              <h3>MATIC Edu</h3>
+              <p>Plug-and-print simplicity for classrooms, labs and first-time makers.</p>
+              <ul class="product-card__specs">
+                <li><span>Speed</span><b>300 mm/s</b></li>
+                <li><span>Build Volume</span><b>220³ mm</b></li>
+                <li><span>Accuracy</span><b>±0.1 mm</b></li>
+                <li><span>Nozzle</span><b>260 °C</b></li>
+              </ul>
+              <a href="#contact" class="product-card__link" data-magnetic>Configure →</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Comparison -->
+        <div class="compare glass" data-reveal>
+          <h3 class="compare__title">Compare The Lineup</h3>
+          <div class="compare__scroll">
+            <table class="compare__table">
+              <thead>
+                <tr>
+                  <th>Specification</th>
+                  <th>Core</th>
+                  <th>Pro</th>
+                  <th>Edu</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Max Speed</td><td>500 mm/s</td><td>450 mm/s</td><td>300 mm/s</td></tr>
+                <tr><td>Build Volume</td><td>256³ mm</td><td>350³ mm</td><td>220³ mm</td></tr>
+                <tr><td>Positioning Accuracy</td><td>±0.05 mm</td><td>±0.03 mm</td><td>±0.1 mm</td></tr>
+                <tr><td>Max Nozzle Temp</td><td>300 °C</td><td>350 °C</td><td>260 °C</td></tr>
+                <tr><td>Auto Bed Leveling</td><td>✓</td><td>✓</td><td>✓</td></tr>
+                <tr><td>Enclosed Chamber</td><td>✓</td><td>✓</td><td>—</td></tr>
+                <tr><td>Local Support</td><td>✓</td><td>✓</td><td>✓</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY MATIC ============ -->
+    <section class="why section" id="why">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow" data-reveal>03 — Why MATIC</span>
+          <h2 class="section__title" data-split-lines>Built different. Built here.</h2>
+        </div>
+
+        <div class="why__grid">
+          <article class="feature glass" data-reveal>
+            <div class="feature__icon">
+              <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/flash-dynamic-premium.png" alt="Speed" class="feature__3d-icon" />
+            </div>
+            <h3>High Speed</h3>
+            <p>Class-leading print speeds without sacrificing surface quality.</p>
+          </article>
+          <article class="feature glass" data-reveal data-delay="0.05">
+            <div class="feature__icon">
+              <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/thumb-up-dynamic-premium.png" alt="Easy" class="feature__3d-icon" />
+            </div>
+            <h3>Easy To Use</h3>
+            <p>Guided setup, intuitive software and print-ready profiles out of the box.</p>
+          </article>
+          <article class="feature glass" data-reveal data-delay="0.1">
+            <div class="feature__icon">
+              <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/target-dynamic-premium.png" alt="Precision" class="feature__3d-icon" />
+            </div>
+            <h3>Precision Engineering</h3>
+            <p>Rigid frames and calibrated motion for repeatable micron-level accuracy.</p>
+          </article>
+          <article class="feature glass" data-reveal data-delay="0.15">
+            <div class="feature__icon">
+              <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/chat-bubble-dynamic-premium.png" alt="Support" class="feature__3d-icon" />
+            </div>
+            <h3>Local Support</h3>
+            <p>Iraqi engineers, Iraqi spare parts, Iraqi service — no waiting on imports.</p>
+          </article>
+          <article class="feature glass" data-reveal data-delay="0.2">
+            <div class="feature__icon">
+              <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/lock-dynamic-premium.png" alt="Hardware" class="feature__3d-icon" />
+            </div>
+            <h3>Reliable Hardware</h3>
+            <p>Industrial components rated for thousands of hours of continuous work.</p>
+          </article>
+          <article class="feature glass" data-reveal data-delay="0.25">
+            <div class="feature__icon">
+              <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/rocket-dynamic-premium.png" alt="Future" class="feature__3d-icon" />
+            </div>
+            <h3>Future Ready</h3>
+            <p>Modular, upgradable platforms that evolve with your ambitions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ APPLICATIONS ============ -->
+    <section class="apps section" id="applications">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow" data-reveal>04 — Applications</span>
+          <h2 class="section__title" data-split-lines>One platform. Every industry.</h2>
+        </div>
+
+        <div class="apps__layout">
+          <div class="apps__list">
+            <button class="apps__item is-active" data-app="0">
+              <span class="apps__index">01</span>
+              <span class="apps__name">Architecture</span>
+            </button>
+            <button class="apps__item" data-app="1">
+              <span class="apps__index">02</span>
+              <span class="apps__name">Engineering</span>
+            </button>
+            <button class="apps__item" data-app="2">
+              <span class="apps__index">03</span>
+              <span class="apps__name">Education</span>
+            </button>
+            <button class="apps__item" data-app="3">
+              <span class="apps__index">04</span>
+              <span class="apps__name">Manufacturing</span>
+            </button>
+            <button class="apps__item" data-app="4">
+              <span class="apps__index">05</span>
+              <span class="apps__name">Healthcare</span>
+            </button>
+            <button class="apps__item" data-app="5">
+              <span class="apps__index">06</span>
+              <span class="apps__name">Product Design</span>
+            </button>
+          </div>
+
+          <div class="apps__stage glass">
+            <div class="apps__panel is-active" data-panel="0">
+              <div class="apps__visual" data-app-art="0">
+                <div class="apps__3d-wrap">
+                  <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/cube-dynamic-premium.png" alt="Architecture 3D Icon" class="apps__3d-icon" />
+                </div>
+              </div>
+              <h3>Architecture</h3>
+              <p>Turn concepts into tangible scale models in hours. Present buildings,
+              districts and topography with detail no foam board can match.</p>
+            </div>
+            <div class="apps__panel" data-panel="1">
+              <div class="apps__visual" data-app-art="1">
+                <div class="apps__3d-wrap">
+                  <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/tool-dynamic-premium.png" alt="Engineering 3D Icon" class="apps__3d-icon" />
+                </div>
+              </div>
+              <h3>Engineering</h3>
+              <p>Iterate functional prototypes overnight. Test fit, form and function
+              before committing to expensive tooling.</p>
+            </div>
+            <div class="apps__panel" data-panel="2">
+              <div class="apps__visual" data-app-art="2">
+                <div class="apps__3d-wrap">
+                  <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/notebook-dynamic-premium.png" alt="Education 3D Icon" class="apps__3d-icon" />
+                </div>
+              </div>
+              <h3>Education</h3>
+              <p>Give students a hands-on bridge between digital design and the
+              physical world — and the skills the future demands.</p>
+            </div>
+            <div class="apps__panel" data-panel="3">
+              <div class="apps__visual" data-app-art="3">
+                <div class="apps__3d-wrap">
+                  <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/gift-dynamic-premium.png" alt="Manufacturing 3D Icon" class="apps__3d-icon" />
+                </div>
+              </div>
+              <h3>Manufacturing</h3>
+              <p>Produce jigs, fixtures and end-use parts on demand. Cut lead times
+              and keep production lines moving.</p>
+            </div>
+            <div class="apps__panel" data-panel="4">
+              <div class="apps__visual" data-app-art="4">
+                <div class="apps__3d-wrap">
+                  <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/heart-dynamic-premium.png" alt="Healthcare 3D Icon" class="apps__3d-icon" />
+                </div>
+              </div>
+              <h3>Healthcare</h3>
+              <p>Custom anatomical models, surgical guides and assistive devices —
+              manufactured precisely and locally.</p>
+            </div>
+            <div class="apps__panel" data-panel="5">
+              <div class="apps__visual" data-app-art="5">
+                <div class="apps__3d-wrap">
+                  <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/bulb-dynamic-premium.png" alt="Product Design 3D Icon" class="apps__3d-icon" />
+                </div>
+              </div>
+              <h3>Product Design</h3>
+              <p>Move from sketch to holdable prototype in a single afternoon and
+              refine with confidence.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOUNDER ============ -->
+    <section class="founder section" id="founder">
+      <div class="founder__bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="founder__grid">
+          <div class="founder__portrait" data-reveal>
+            <span class="founder__ring" aria-hidden="true"></span>
+            <div class="founder__photo">
+              <div class="founder__photo-glow"></div>
+              <img src="founder.png" alt="Bashar Al Noorachi, Founder & CEO of MATIC" loading="lazy" />
+            </div>
+            <div class="founder__badge glass">
+              <span class="founder__badge-dot"></span>
+              <div>
+                <strong>Bashar Al Noorachi</strong>
+                <span>Founder &amp; CEO · MATIC</span>
+              </div>
+            </div>
+          </div>
+          <div class="founder__content">
+            <span class="eyebrow" data-reveal>05 — Founder</span>
+            <blockquote class="founder__quote" data-split-lines>
+              "We believe Iraq can build world-class technology. MATIC is our first
+              step toward that future."
+            </blockquote>
+            <div class="founder__sign" data-reveal>
+              <strong>Bashar Al Noorachi</strong>
+              <span>Founder &amp; CEO, MATIC</span>
+            </div>
+            <div class="founder__cols">
+              <div data-reveal>
+                <h4>Founder Story</h4>
+                <p>An engineer who refused to accept that cutting-edge manufacturing
+                belonged elsewhere — and decided to build it at home.</p>
+              </div>
+              <div data-reveal data-delay="0.1">
+                <h4>Vision</h4>
+                <p>A self-reliant Iraq where any idea can be designed, prototyped and
+                produced without crossing a border.</p>
+              </div>
+              <div data-reveal data-delay="0.15">
+                <h4>Mission</h4>
+                <p>To deliver fast, reliable, beautifully engineered 3D printers backed
+                by uncompromising local support.</p>
+              </div>
+              <div data-reveal data-delay="0.2">
+                <h4>Leadership Philosophy</h4>
+                <p>Build with precision, lead with humility, and measure success by the
+                creators we empower.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VISION / TIMELINE ============ -->
+    <section class="vision section" id="vision">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow" data-reveal>06 — Manufacturing Vision</span>
+          <h2 class="section__title" data-split-lines>The roadmap to an Iraqi manufacturing renaissance.</h2>
+        </div>
+
+        <div class="vision__stats">
+          <div class="stat" data-reveal>
+            <span class="stat__num" data-count="500">0</span><span class="stat__suffix">mm/s</span>
+            <span class="stat__label">Peak print speed</span>
+          </div>
+          <div class="stat" data-reveal data-delay="0.1">
+            <span class="stat__num" data-count="50">0</span><span class="stat__suffix">µm</span>
+            <span class="stat__label">Layer resolution</span>
+          </div>
+          <div class="stat" data-reveal data-delay="0.2">
+            <span class="stat__num" data-count="100">0</span><span class="stat__suffix">%</span>
+            <span class="stat__label">Locally supported</span>
+          </div>
+          <div class="stat" data-reveal data-delay="0.3">
+            <span class="stat__num" data-count="24">0</span><span class="stat__suffix">/7</span>
+            <span class="stat__label">Production ready</span>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline__line"><span class="timeline__progress"></span></div>
+          <div class="timeline__item" data-reveal>
+            <span class="timeline__year">2024</span>
+            <h3>The Spark</h3>
+            <p>MATIC is founded with a single conviction: Iraq can build, not just buy.</p>
+          </div>
+          <div class="timeline__item" data-reveal data-delay="0.1">
+            <span class="timeline__year">2025</span>
+            <h3>First Machines</h3>
+            <p>Our first high-performance printers roll off the bench and into the hands of early innovators.</p>
+          </div>
+          <div class="timeline__item" data-reveal data-delay="0.2">
+            <span class="timeline__year">2026</span>
+            <h3>Scaling Up</h3>
+            <p>Local production deepens, the lineup expands, and a nationwide support network takes shape.</p>
+          </div>
+          <div class="timeline__item" data-reveal data-delay="0.3">
+            <span class="timeline__year">Beyond</span>
+            <h3>A New Industry</h3>
+            <p>MATIC anchors a thriving advanced-manufacturing ecosystem across Iraq and the Middle East.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="gallery section" id="gallery">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow" data-reveal>07 — Gallery</span>
+          <h2 class="section__title" data-split-lines>Printed in Iraq.</h2>
+        </div>
+        <div class="gallery__grid" id="galleryGrid">
+          <!-- populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="testi section" id="testimonials">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow" data-reveal>08 — Testimonials</span>
+          <h2 class="section__title" data-split-lines>Trusted by the people building tomorrow.</h2>
+        </div>
+        <div class="testi__grid">
+          <figure class="testi__card glass" data-reveal>
+            <blockquote>"We cut our prototyping time by 70%. The Core simply doesn't stop, and support is a phone call away."</blockquote>
+            <figcaption><strong>Layla H.</strong><span>Mechanical Engineer, Baghdad</span></figcaption>
+          </figure>
+          <figure class="testi__card glass" data-reveal data-delay="0.1">
+            <blockquote>"Finally a printer with local service. Our lab runs three MATIC machines every single day."</blockquote>
+            <figcaption><strong>Dr. Omar A.</strong><span>University Lab Director, Basra</span></figcaption>
+          </figure>
+          <figure class="testi__card glass" data-reveal data-delay="0.2">
+            <blockquote>"The quality competes with anything imported — at a price and support level nothing else matches here."</blockquote>
+            <figcaption><strong>Sara K.</strong><span>Product Design Studio, Erbil</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="contact__grid">
+          <div class="contact__intro">
+            <span class="eyebrow" data-reveal>09 — Contact</span>
+            <h2 class="section__title" data-split-lines>Let's build the future together.</h2>
+            <p class="contact__lead" data-reveal>Talk to our team about machines, pilots,
+            education programs or partnerships. We respond within one business day.</p>
+
+            <div class="contact__info">
+              <a href="mailto:hello@matic.iq" class="contact__chip glass" data-magnetic>
+                <span>Email</span><strong>hello@matic.iq</strong>
+              </a>
+              <a href="tel:+9640000000000" class="contact__chip glass" data-magnetic>
+                <span>Phone</span><strong>+964 000 000 0000</strong>
+              </a>
+              <div class="contact__chip glass">
+                <span>HQ</span><strong>Baghdad, Iraq</strong>
+              </div>
+            </div>
+
+            <div class="contact__map glass" aria-label="Map area">
+              <div class="contact__map-grid"></div>
+              <span class="contact__map-pin"></span>
+              <span class="contact__map-label">Baghdad · Iraq</span>
+            </div>
+
+            <div class="contact__social">
+              <a href="https://www.instagram.com/matic.iq/" target="_blank" rel="noopener noreferrer" data-magnetic aria-label="Instagram">IG</a>
+              <a href="https://www.facebook.com/profile.php?id=61578563612533&rdid=oIz0VlsvCKReDyAR&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AtW3nZHas%2F%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio#" target="_blank" rel="noopener noreferrer" data-magnetic aria-label="Facebook">FB</a>
+              <a href="#" data-magnetic aria-label="LinkedIn">IN</a>
+              <a href="#" data-magnetic aria-label="X">X</a>
+            </div>
+          </div>
+
+          <form class="contact__form glass" id="contactForm" novalidate>
+            <div class="field">
+              <input type="text" id="name" name="name" required placeholder=" " />
+              <label for="name">Full Name</label>
+            </div>
+            <div class="field">
+              <input type="email" id="email" name="email" required placeholder=" " />
+              <label for="email">Email Address</label>
+            </div>
+            <div class="field">
+              <input type="text" id="company" name="company" placeholder=" " />
+              <label for="company">Company / Organization</label>
+            </div>
+            <div class="field">
+              <select id="interest" name="interest">
+                <option value="core">MATIC Core</option>
+                <option value="pro">MATIC Pro</option>
+                <option value="edu">MATIC Edu</option>
+                <option value="partnership">Partnership</option>
+                <option value="other">Other</option>
+              </select>
+              <label for="interest" class="field__static">Interested In</label>
+            </div>
+            <div class="field">
+              <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+              <label for="message">Message</label>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full" data-magnetic>
+              <span>Send Message</span>
+            </button>
+            <p class="contact__note" id="formNote" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <a href="#hero" class="footer__logo">MATIC</a>
+        <p class="footer__tag">Engineering the future of 3D printing — from Iraq, for the world.</p>
+      </div>
+      <div class="footer__grid">
+        <div>
+          <h5>Products</h5>
+          <a href="#products">MATIC Core</a>
+          <a href="#products">MATIC Pro</a>
+          <a href="#products">MATIC Edu</a>
+        </div>
+        <div>
+          <h5>Company</h5>
+          <a href="#story">Story</a>
+          <a href="#founder">Founder</a>
+          <a href="#vision">Vision</a>
+        </div>
+        <div>
+          <h5>Explore</h5>
+          <a href="#applications">Applications</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#testimonials">Testimonials</a>
+        </div>
+        <div>
+          <h5>Connect</h5>
+          <a href="#contact">Contact</a>
+          <a href="mailto:hello@matic.iq">hello@matic.iq</a>
+          <a href="#">Careers</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="year"></span> MATIC. All rights reserved.</span>
+        <span>Designed &amp; built in Iraq 🇮🇶</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
